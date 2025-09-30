@@ -1,0 +1,109 @@
+TERMS OF SERVICE
+BERITA PARIWISATA INDONESIA
+
+Terakhir diperbarui: 29 September 2025
+
+PENTING: Dengan mengunduh, menginstal, atau menggunakan aplikasi Berita Pariwisata Indonesia, Anda setuju untuk terikat dengan Terms of Service ini. Jika Anda tidak setuju, jangan gunakan aplikasi ini.
+
+1. TENTANG APLIKASI
+
+Berita Pariwisata Indonesia adalah aplikasi mobile yang berfungsi sebagai agregator berita pariwisata. Aplikasi ini menyediakan akses mudah ke konten berita dari berbagai sumber terpercaya dalam industri pariwisata Indonesia.
+
+2. PENGGUNAAN LAYANAN
+
+2.1 Izin Penggunaan
+Kami memberikan Anda izin terbatas, non-eksklusif, tidak dapat dialihkan, dan dapat dicabut untuk menggunakan aplikasi ini sesuai dengan Terms of Service ini.
+
+2.2 Pembatasan Penggunaan
+Anda setuju untuk TIDAK:
+• Menggunakan aplikasi untuk tujuan ilegal atau tidak sah
+• Mencoba mengakses atau mengganggu server atau jaringan aplikasi
+• Mendistribusikan ulang atau memodifikasi aplikasi tanpa izin
+• Melakukan reverse engineering atau mencoba mengekstrak source code
+• Menggunakan aplikasi dengan cara yang dapat merusak atau mengganggu layanan
+
+3. KONTEN DAN SUMBER BERITA
+
+3.1 Agregasi Konten
+Aplikasi ini menampilkan konten dari sumber-sumber berikut:
+• Koran Pariwisata - Sebagai sumber utama berita pariwisata
+• CNN Indonesia - Kategori Pariwisata
+• MetroTV News - Pariwisata Indonesia
+
+3.2 Disclaimer Kepemilikan Konten
+• Semua konten berita, artikel, gambar, dan materi lainnya yang ditampilkan dalam aplikasi ini tetap menjadi hak cipta dan milik eksklusif dari pemilik situs sumber masing-masing
+• Kami tidak mengklaim kepemilikan atas konten tersebut
+• Kami berfungsi hanya sebagai perantara untuk memudahkan akses ke konten yang sudah tersedia secara publik
+• Terms of Service dan kebijakan dari masing-masing sumber berlaku untuk konten mereka
+
+4. KETERSEDIAAN LAYANAN
+
+Kami berusaha menjaga aplikasi tetap tersedia, namun:
+• Layanan dapat mengalami gangguan karena faktor teknis atau pemeliharaan
+• Ketersediaan konten bergantung pada sumber berita eksternal
+• Kami berhak melakukan pemeliharaan atau pembaruan tanpa pemberitahuan sebelumnya
+• Akses ke konten dapat terganggu karena masalah konektivitas internet
+
+5. PRIVACY DAN DATA
+
+Penggunaan data dan privasi Anda diatur oleh Privacy Policy kami yang merupakan bagian integral dari Terms of Service ini. Silakan baca Privacy Policy untuk informasi lengkap tentang bagaimana kami menangani informasi Anda.
+
+6. DISCLAIMER DAN BATASAN TANGGUNG JAWAB
+
+6.1 Akurasi Konten
+• Kami tidak bertanggung jawab atas akurasi, kelengkapan, atau keandalan konten dari sumber eksternal
+• Konten yang ditampilkan berasal dari sumber pihak ketiga dan bukan merupakan pendapat atau pernyataan kami
+• Pengguna bertanggung jawab untuk memverifikasi informasi yang diperoleh dari aplikasi
+
+6.2 Batasan Tanggung Jawab
+DALAM BATAS MAKSIMUM YANG DIIZINKAN HUKUM, KAMI MENOLAK SEMUA JAMINAN DAN TIDAK BERTANGGUNG JAWAB ATAS:
+• Kerugian langsung atau tidak langsung dari penggunaan aplikasi
+• Gangguan layanan atau kehilangan data
+• Konten yang tidak akurat atau menyesatkan dari sumber eksternal
+• Kerusakan perangkat atau sistem yang disebabkan oleh aplikasi
+
+7. HAK KEKAYAAN INTELEKTUAL
+
+7.1 Aplikasi
+Desain, struktur, dan kode aplikasi Berita Pariwisata Indonesia adalah milik kami dan dilindungi oleh hak cipta.
+
+7.2 Konten Pihak Ketiga
+Semua konten berita dan materi dari sumber eksternal tetap menjadi milik pemilik hak cipta masing-masing. Kami menghormati hak kekayaan intelektual dan akan menanggapi klaim pelanggaran hak cipta sesuai prosedur hukum yang berlaku.
+
+8. PEMBARUAN DAN MODIFIKASI
+
+• Kami dapat memperbarui aplikasi dari waktu ke waktu untuk perbaikan dan fitur baru
+• Terms of Service ini dapat dimodifikasi sesuai kebutuhan dengan pemberitahuan melalui aplikasi
+• Penggunaan berkelanjutan setelah pembaruan menunjukkan penerimaan terhadap perubahan
+
+9. PENGHENTIAN LAYANAN
+
+Kami berhak:
+• Menghentikan atau membatasi akses Anda jika melanggar Terms of Service
+• Memodifikasi atau menghentikan layanan dengan pemberitahuan yang wajar
+• Menghapus aplikasi dari toko aplikasi jika diperlukan
+
+10. HUKUM YANG BERLAKU
+
+Terms of Service ini diatur oleh hukum Republik Indonesia. Segala sengketa akan diselesaikan melalui:
+• Musyawarah dan mufakat terlebih dahulu
+• Pengadilan yang berwenang di Indonesia jika diperlukan
+
+11. KETENTUAN LAIN
+
+• Jika ada bagian dari Terms of Service yang tidak berlaku, bagian lainnya tetap berkekuatan hukum
+• Kegagalan kami untuk menegakkan ketentuan tertentu tidak berarti melepaskan hak tersebut
+• Terms of Service ini merupakan perjanjian lengkap antara Anda dan kami
+
+12. KONTAK
+
+Untuk pertanyaan terkait Terms of Service ini, silakan hubungi:
+
+Email: support@beritapariwisata.app
+Aplikasi: Berita Pariwisata Indonesia
+Package ID: id.smkbn666.beritapariwisata
+
+---
+© 2025 Berita Pariwisata Indonesia. All rights reserved.
+
+Dengan menggunakan aplikasi ini, Anda menyetujui Terms of Service dan Privacy Policy kami.

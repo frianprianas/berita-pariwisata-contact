@@ -1,0 +1,92 @@
+PRIVACY POLICY
+BERITA PARIWISATA INDONESIA
+
+Terakhir diperbarui: 29 September 2025
+
+1. INFORMASI UMUM
+
+Berita Pariwisata Indonesia ("Aplikasi", "kami", atau "aplikasi ini") menghormati privasi pengguna dan berkomitmen untuk melindungi informasi pribadi Anda. Privacy Policy ini menjelaskan bagaimana kami mengumpulkan, menggunakan, dan melindungi informasi ketika Anda menggunakan aplikasi mobile kami.
+
+2. INFORMASI YANG KAMI KUMPULKAN
+
+2.1 Informasi yang Dikumpulkan Secara Otomatis
+• Data Penggunaan Aplikasi: Informasi tentang cara Anda menggunakan aplikasi, seperti fitur yang diakses dan waktu penggunaan
+• Data Teknis: Jenis perangkat, sistem operasi, versi aplikasi, dan pengaturan bahasa
+• Data Jaringan: Alamat IP untuk keperluan konektivitas ke layanan berita
+
+2.2 Informasi yang Tidak Kami Kumpulkan
+• Kami TIDAK mengumpulkan informasi pribadi seperti nama, email, atau nomor telepon
+• Kami TIDAK mengakses kontak, galeri foto, atau file pribadi Anda
+• Kami TIDAK menggunakan kamera atau mikrofon
+• Kami TIDAK melacak lokasi geografis Anda
+
+3. BAGAIMANA KAMI MENGGUNAKAN INFORMASI
+
+Informasi yang dikumpulkan digunakan untuk:
+• Menyediakan akses ke konten berita pariwisata dari sumber-sumber terpercaya
+• Meningkatkan kinerja dan stabilitas aplikasi
+• Memastikan kompatibilitas aplikasi dengan perangkat Anda
+• Memberikan dukungan teknis jika diperlukan
+
+4. SUMBER KONTEN DAN DISCLAIMER
+
+Aplikasi ini berfungsi sebagai agregator berita yang menyediakan akses ke konten dari:
+• Koran Pariwisata (https://koran-pariwisata.com/)
+• CNN Indonesia - Kategori Pariwisata (https://www.cnnindonesia.com/tag/pariwisata)
+• MetroTV News - Pariwisata Indonesia (https://www.metrotvnews.com/tag/808/pariwisata-indonesia)
+
+PENTING:
+• Semua konten berita tetap menjadi hak cipta dan milik dari pemilik situs masing-masing
+• Kami tidak menyimpan atau memodifikasi konten dari sumber-sumber tersebut
+• Kebijakan privasi dari setiap sumber berita berlaku ketika Anda mengakses konten mereka
+
+5. KEAMANAN DATA
+
+Kami menerapkan langkah-langkah keamanan yang wajar untuk melindungi informasi yang dikumpulkan:
+• Transmisi data dilakukan melalui koneksi yang aman
+• Akses ke data terbatas pada fungsi-fungsi yang diperlukan aplikasi
+• Tidak ada penyimpanan data pribadi sensitif di server kami
+
+6. COOKIES DAN TEKNOLOGI PELACAKAN
+
+Aplikasi ini menggunakan WebView untuk menampilkan konten web. Situs web yang diakses melalui aplikasi mungkin menggunakan cookies sesuai dengan kebijakan privasi mereka masing-masing. Anda dapat mengelola pengaturan cookies melalui pengaturan browser di perangkat Anda.
+
+7. LAYANAN PIHAK KETIGA
+
+Aplikasi ini tidak mengintegrasikan layanan analytics atau advertising dari pihak ketiga. Namun, konten yang ditampilkan berasal dari situs web pihak ketiga yang memiliki kebijakan privasi mereka sendiri.
+
+8. HAK PENGGUNA
+
+Anda memiliki hak untuk:
+• Menghapus aplikasi kapan saja untuk menghentikan pengumpulan data
+• Mengontrol pengaturan jaringan dan izin aplikasi melalui pengaturan perangkat
+• Menghubungi kami untuk pertanyaan terkait privasi
+
+9. PENGGUNA ANAK-ANAK
+
+Aplikasi ini tidak secara khusus dirancang untuk anak-anak di bawah 13 tahun. Kami tidak dengan sengaja mengumpulkan informasi pribadi dari anak-anak di bawah 13 tahun. Jika Anda adalah orang tua dan mengetahui bahwa anak Anda telah memberikan informasi pribadi kepada kami, silakan hubungi kami.
+
+10. PERUBAHAN PADA PRIVACY POLICY
+
+Kami dapat memperbarui Privacy Policy ini dari waktu ke waktu. Perubahan akan diberitahukan melalui:
+• Pembaruan halaman ini dengan tanggal revisi terbaru
+• Notifikasi dalam aplikasi untuk perubahan material
+
+Penggunaan aplikasi yang berkelanjutan setelah perubahan menunjukkan penerimaan Anda terhadap Privacy Policy yang diperbarui.
+
+11. YURISDIKSI DAN HUKUM YANG BERLAKU
+
+Privacy Policy ini diatur oleh dan ditafsirkan sesuai dengan hukum Republik Indonesia. Setiap sengketa yang timbul dari atau berkaitan dengan Privacy Policy ini akan diselesaikan di pengadilan yang berwenang di Indonesia.
+
+12. KONTAK
+
+Jika Anda memiliki pertanyaan tentang Privacy Policy ini atau praktik privasi aplikasi, silakan hubungi kami:
+
+Email: privacy@beritapariwisata.app
+Aplikasi: Berita Pariwisata Indonesia  
+Package: id.smkbn666.beritapariwisata
+
+Dengan menggunakan aplikasi ini, Anda menyetujui pengumpulan dan penggunaan informasi sesuai dengan Privacy Policy ini.
+
+---
+© 2025 Berita Pariwisata Indonesia. All rights reserved.
