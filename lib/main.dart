@@ -93,6 +93,11 @@ class _WebViewHomeState extends State<WebViewHome> {
     });
   }
 
+  String _getCurrentTime() {
+    final now = DateTime.now();
+    return '${now.hour.toString().padLeft(2, '0')}:${now.minute.toString().padLeft(2, '0')}';
+  }
+
   @override
   Widget build(BuildContext context) {
     String currentSiteName = _selectedIndex == 0 
@@ -125,6 +130,50 @@ class _WebViewHomeState extends State<WebViewHome> {
       ),
       body: Stack(
         children: [
+          // NEWS AGGREGATOR BANNER
+          Positioned(
+            top: 0,
+            left: 0,
+            right: 0,
+            child: Container(
+              padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 12),
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  colors: [Colors.blue.shade700, Colors.blue.shade500],
+                ),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withOpacity(0.2),
+                    blurRadius: 4,
+                    offset: const Offset(0, 2),
+                  ),
+                ],
+              ),
+              child: Row(
+                children: [
+                  const Icon(Icons.info_outline, color: Colors.white, size: 16),
+                  const SizedBox(width: 8),
+                  Expanded(
+                    child: Text(
+                      'NEWS AGGREGATOR • Content dari ${_selectedIndex == 0 ? "Koran Pariwisata" : _selectedIndex == 1 ? "CNN Indonesia" : "MetroTV News"} • Live Updated',
+                      style: const TextStyle(
+                        color: Colors.white,
+                        fontSize: 12,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                  ),
+                  Text(
+                    _getCurrentTime(),
+                    style: const TextStyle(
+                      color: Colors.white70,
+                      fontSize: 10,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
           if (_errorMessage.isNotEmpty)
             Center(
               child: Column(
@@ -148,7 +197,10 @@ class _WebViewHomeState extends State<WebViewHome> {
               ),
             )
           else
-            WebViewWidget(controller: _controller),
+            Padding(
+              padding: const EdgeInsets.only(top: 40),
+              child: WebViewWidget(controller: _controller),
+            ),
           if (_isLoading)
             const Center(
               child: CircularProgressIndicator(
@@ -393,16 +445,54 @@ class AboutPage extends StatelessWidget {
                 ),
               ),
               
+              // NEWS AGGREGATOR DECLARATION - PROMINENT
+              Container(
+                padding: const EdgeInsets.all(16),
+                margin: const EdgeInsets.only(bottom: 20),
+                decoration: BoxDecoration(
+                  color: Colors.orange.withOpacity(0.1),
+                  borderRadius: BorderRadius.circular(8),
+                  border: Border.all(color: Colors.orange, width: 2),
+                ),
+                child: const Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      children: [
+                        Icon(Icons.warning_amber, color: Colors.orange, size: 24),
+                        SizedBox(width: 8),
+                        Expanded(
+                          child: Text(
+                            'PEMBERITAHUAN AGREGATOR BERITA',
+                            style: TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.orange,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(height: 12),
+                    Text(
+                      'Aplikasi ini adalah NEWS AGGREGATOR yang mengumpulkan dan menampilkan berita dari berbagai sumber terpercaya. Kami BUKAN pemilik konten dan TIDAK memproduksi berita sendiri.',
+                      style: TextStyle(
+                        fontSize: 14,
+                        fontWeight: FontWeight.w600,
+                        height: 1.4,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              
               const Text(
                 'Aplikasi ini dirancang khusus untuk memberikan akses mudah ke berita dan informasi '
                 'terkini seputar pariwisata Indonesia. Koran Pariwisata menjadi sumber utama yang '
                 'menyajikan berita terpercaya tentang industri pariwisata.\n\n'
                 'Untuk melengkapi perspektif berita pariwisata, aplikasi ini juga menyediakan akses ke '
                 'portal berita nasional lainnya yang membahas topik pariwisata, seperti CNN Indonesia '
-                'dan MetroTV News.\n\n'
-                'Disclaimer: Kami bukan pemilik resmi dari konten yang ditampilkan. Semua hak cipta '
-                'dan merek dagang tetap menjadi milik masing-masing pemilik situs. Aplikasi ini '
-                'bertujuan sebagai agregator untuk kemudahan akses informasi pariwisata.',
+                'dan MetroTV News.',
                 style: TextStyle(fontSize: 16, height: 1.6),
                 textAlign: TextAlign.justify,
               ),
