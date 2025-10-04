@@ -178,6 +178,75 @@ class _WebViewHomeState extends State<WebViewHome> {
           ),
         ],
       ),
+      floatingActionButton: FloatingActionButton.extended(
+        onPressed: () {
+          showDialog(
+            context: context,
+            builder: (BuildContext context) {
+              return AlertDialog(
+                title: const Row(
+                  children: [
+                    Icon(Icons.contact_phone, color: Colors.green),
+                    SizedBox(width: 8),
+                    Text('HUBUNGI KAMI'),
+                  ],
+                ),
+                content: const Column(
+                  mainAxisSize: MainAxisSize.min,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      children: [
+                        Icon(Icons.email, color: Colors.green, size: 20),
+                        SizedBox(width: 8),
+                        Expanded(
+                          child: SelectableText(
+                            'info.beritapariwisata@smkbaknus666.sch.id',
+                            style: TextStyle(fontSize: 14),
+                          ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(height: 12),
+                    Row(
+                      children: [
+                        Icon(Icons.phone, color: Colors.green, size: 20),
+                        SizedBox(width: 8),
+                        SelectableText(
+                          '+62-21-1234-5666',
+                          style: TextStyle(fontSize: 14),
+                        ),
+                      ],
+                    ),
+                    SizedBox(height: 12),
+                    Row(
+                      children: [
+                        Icon(Icons.school, color: Colors.green, size: 20),
+                        SizedBox(width: 8),
+                        Expanded(
+                          child: Text(
+                            'SMK Baknus 666, Jakarta',
+                            style: TextStyle(fontSize: 14),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+                actions: [
+                  TextButton(
+                    onPressed: () => Navigator.of(context).pop(),
+                    child: const Text('Tutup'),
+                  ),
+                ],
+              );
+            },
+          );
+        },
+        backgroundColor: Colors.green,
+        icon: const Icon(Icons.contact_phone, color: Colors.white),
+        label: const Text('CONTACT', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
+      ),
     );
   }
 }
@@ -233,6 +302,97 @@ class AboutPage extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 24),
+              
+              // CONTACT INFORMATION - VERY PROMINENT
+              Container(
+                padding: const EdgeInsets.all(20),
+                margin: const EdgeInsets.only(bottom: 24),
+                decoration: BoxDecoration(
+                  color: Colors.green.withOpacity(0.1),
+                  borderRadius: BorderRadius.circular(12),
+                  border: Border.all(color: Colors.green, width: 2),
+                ),
+                child: Column(
+                  children: [
+                    const Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(Icons.contact_phone, color: Colors.green, size: 28),
+                        SizedBox(width: 12),
+                        Text(
+                          'HUBUNGI KAMI',
+                          style: TextStyle(
+                            fontSize: 20, 
+                            fontWeight: FontWeight.bold,
+                            color: Colors.green,
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 16),
+                    Container(
+                      padding: const EdgeInsets.all(12),
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(8),
+                        border: Border.all(color: Colors.green.withOpacity(0.3)),
+                      ),
+                      child: Column(
+                        children: [
+                          Row(
+                            children: [
+                              const Icon(Icons.email, color: Colors.green),
+                              const SizedBox(width: 8),
+                              Expanded(
+                                child: SelectableText(
+                                  'info.beritapariwisata@smkbaknus666.sch.id',
+                                  style: const TextStyle(
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                          const SizedBox(height: 8),
+                          Row(
+                            children: [
+                              const Icon(Icons.phone, color: Colors.green),
+                              const SizedBox(width: 8),
+                              Expanded(
+                                child: SelectableText(
+                                  '+62-21-1234-5666',
+                                  style: const TextStyle(
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                          const SizedBox(height: 8),
+                          Row(
+                            children: [
+                              const Icon(Icons.school, color: Colors.green),
+                              const SizedBox(width: 8),
+                              const Expanded(
+                                child: Text(
+                                  'SMK Baknus 666, Jakarta',
+                                  style: TextStyle(
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              
               const Text(
                 'Aplikasi ini dirancang khusus untuk memberikan akses mudah ke berita dan informasi '
                 'terkini seputar pariwisata Indonesia. Koran Pariwisata menjadi sumber utama yang '
