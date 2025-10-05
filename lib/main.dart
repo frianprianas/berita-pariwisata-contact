@@ -28,7 +28,133 @@ class BeritaPariwisataApp extends StatelessWidget {
           type: BottomNavigationBarType.fixed,
         ),
       ),
-      home: const WebViewHome(),
+      home: const SplashScreen(),
+    );
+  }
+}
+
+class SplashScreen extends StatefulWidget {
+  const SplashScreen({super.key});
+
+  @override
+  State<SplashScreen> createState() => _SplashScreenState();
+}
+
+class _SplashScreenState extends State<SplashScreen> 
+    with SingleTickerProviderStateMixin {
+  late AnimationController _animationController;
+  late Animation<double> _fadeAnimation;
+
+  @override
+  void initState() {
+    super.initState();
+    _animationController = AnimationController(
+      duration: const Duration(milliseconds: 1500),
+      vsync: this,
+    );
+    _fadeAnimation = Tween<double>(
+      begin: 0.0,
+      end: 1.0,
+    ).animate(CurvedAnimation(
+      parent: _animationController,
+      curve: Curves.easeInOut,
+    ));
+
+    _animationController.forward();
+    
+    // Navigate to main app after splash
+    Future.delayed(const Duration(milliseconds: 2500), () {
+      if (mounted) {
+        Navigator.pushReplacement(
+          context,
+          PageRouteBuilder(
+            pageBuilder: (context, animation, secondaryAnimation) => const WebViewHome(),
+            transitionsBuilder: (context, animation, secondaryAnimation, child) {
+              return FadeTransition(opacity: animation, child: child);
+            },
+            transitionDuration: const Duration(milliseconds: 500),
+          ),
+        );
+      }
+    });
+  }
+
+  @override
+  void dispose() {
+    _animationController.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.black,
+      body: Center(
+        child: FadeTransition(
+          opacity: _fadeAnimation,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Container(
+                padding: const EdgeInsets.all(24),
+                decoration: BoxDecoration(
+                  color: Colors.amber.withOpacity(0.1),
+                  borderRadius: BorderRadius.circular(20),
+                  border: Border.all(color: Colors.amber, width: 2),
+                ),
+                child: const Icon(
+                  Icons.newspaper,
+                  size: 80,
+                  color: Colors.amber,
+                ),
+              ),
+              const SizedBox(height: 24),
+              const Text(
+                'Koran Pariwisata Indonesia',
+                style: TextStyle(
+                  fontSize: 28,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.amber,
+                ),
+                textAlign: TextAlign.center,
+              ),
+              const SizedBox(height: 8),
+              const Text(
+                'Portal Berita Pariwisata Terdepan',
+                style: TextStyle(
+                  fontSize: 16,
+                  color: Colors.grey,
+                  fontStyle: FontStyle.italic,
+                ),
+                textAlign: TextAlign.center,
+              ),
+              const SizedBox(height: 32),
+              Container(
+                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                decoration: BoxDecoration(
+                  color: Colors.blue.withOpacity(0.1),
+                  borderRadius: BorderRadius.circular(8),
+                  border: Border.all(color: Colors.blue.withOpacity(0.3)),
+                ),
+                child: const Text(
+                  'NEWS AGGREGATOR',
+                  style: TextStyle(
+                    fontSize: 12,
+                    color: Colors.blue,
+                    fontWeight: FontWeight.w600,
+                    letterSpacing: 1.2,
+                  ),
+                ),
+              ),
+              const SizedBox(height: 48),
+              const CircularProgressIndicator(
+                valueColor: AlwaysStoppedAnimation<Color>(Colors.amber),
+                strokeWidth: 2,
+              ),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }
@@ -42,8 +168,9 @@ class WebViewHome extends StatefulWidget {
 
 class _WebViewHomeState extends State<WebViewHome> {
   int _selectedIndex = 0;
-  bool _isLoading = true;
+  bool _isLoading = false; // Start with false for faster launch
   String _errorMessage = '';
+  bool _webViewInitialized = false;
 
   final List<String> _urls = [
     'https://koran-pariwisata.com/',
@@ -51,46 +178,83 @@ class _WebViewHomeState extends State<WebViewHome> {
     'https://www.metrotvnews.com/tag/808/pariwisata-indonesia',
   ];
 
-  late WebViewController _controller;
+  WebViewController? _controller; // Make nullable for lazy init
 
-  @override
+    @override
   void initState() {
     super.initState();
+    // Delay WebView initialization for faster launch
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      _initializeWebView();
+    });
+  }
+
+  void _initializeWebView() {
+    if (_webViewInitialized) return;
+    
+    setState(() {
+      _isLoading = true;
+    });
+    
     _controller = WebViewController()
       ..setJavaScriptMode(JavaScriptMode.unrestricted)
       ..setNavigationDelegate(
         NavigationDelegate(
+          onProgress: (int progress) {
+            // Update loading bar.
+          },
           onPageStarted: (String url) {
-            setState(() {
-              _isLoading = true;
-              _errorMessage = '';
-            });
+            if (mounted) {
+              setState(() {
+                _isLoading = true;
+                _errorMessage = '';
+              });
+            }
           },
           onPageFinished: (String url) {
-            setState(() {
-              _isLoading = false;
-            });
+            if (mounted) {
+              setState(() {
+                _isLoading = false;
+              });
+            }
+          },
+          onHttpError: (HttpResponseError error) {
+            if (mounted) {
+              setState(() {
+                _errorMessage = 'Error loading page: ${error.response?.statusCode}';
+                _isLoading = false;
+              });
+            }
           },
           onWebResourceError: (WebResourceError error) {
-            setState(() {
-              _isLoading = false;
-              _errorMessage = 'Error: ${error.description}';
-            });
+            if (mounted) {
+              setState(() {
+                _errorMessage = 'Error: ${error.description}';
+                _isLoading = false;
+              });
+            }
           },
         ),
       )
       ..loadRequest(Uri.parse(_urls[_selectedIndex]));
+    
+    _webViewInitialized = true;
   }
 
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
-      _isLoading = true;
       _errorMessage = '';
-      if (index < _urls.length) {
-        _controller.loadRequest(Uri.parse(_urls[_selectedIndex]));
-      }
     });
+    
+    if (!_webViewInitialized) {
+      _initializeWebView();
+    } else if (_controller != null && index < _urls.length) {
+      setState(() {
+        _isLoading = true;
+      });
+      _controller!.loadRequest(Uri.parse(_urls[_selectedIndex]));
+    }
   }
 
   String _getCurrentTime() {
@@ -114,7 +278,11 @@ class _WebViewHomeState extends State<WebViewHome> {
           IconButton(
             icon: const Icon(Icons.refresh),
             onPressed: () {
-              _controller.reload();
+              if (_controller != null) {
+                _controller!.reload();
+              } else {
+                _initializeWebView();
+              }
             },
           ),
           IconButton(
@@ -189,17 +357,50 @@ class _WebViewHomeState extends State<WebViewHome> {
                   const SizedBox(height: 16),
                   ElevatedButton(
                     onPressed: () {
-                      _controller.reload();
+                      if (_controller != null) {
+                        _controller!.reload();
+                      } else {
+                        _initializeWebView();
+                      }
                     },
                     child: const Text('Coba Lagi'),
                   ),
                 ],
               ),
             )
-          else
+          else if (_controller != null)
             Padding(
               padding: const EdgeInsets.only(top: 40),
-              child: WebViewWidget(controller: _controller),
+              child: WebViewWidget(controller: _controller!),
+            )
+          else
+            const Padding(
+              padding: EdgeInsets.only(top: 40),
+              child: Center(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(Icons.newspaper, size: 64, color: Colors.amber),
+                    SizedBox(height: 16),
+                    Text(
+                      'Koran Pariwisata Indonesia',
+                      style: TextStyle(
+                        fontSize: 24,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.amber,
+                      ),
+                    ),
+                    SizedBox(height: 8),
+                    Text(
+                      'Tap navigasi untuk mulai membaca berita',
+                      style: TextStyle(
+                        fontSize: 16,
+                        color: Colors.grey,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
             ),
           if (_isLoading)
             const Center(
