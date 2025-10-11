@@ -1,0 +1,101 @@
+📋 CHECKLIST LENGKAP GOOGLE PLAY STORE UPLOAD
+==============================================
+
+✅ 1. NAMA APLIKASI (maksimal 35 karakter)
+   "Koran Pariwisata Indonesia" (26 karakter)
+
+✅ 2. DESKRIPSI SINGKAT (maksimal 80 karakter) 
+   "Portal berita pariwisata terdepan dengan akses ke berbagai sumber terpercaya" (76 karakter)
+
+✅ 3. DESKRIPSI LENGKAP (minimal 200 kata)
+   📁 File: play_store_description.txt
+   ✅ Lebih dari 200 kata
+   ✅ Menyebutkan NEWS AGGREGATOR dengan jelas
+   ✅ Disclaimer ownership konten
+   ✅ Contact information
+   ✅ Source attribution
+   ✅ Policy compliance
+
+✅ 4. URL PRIVACY POLICY
+   https://frianprianas.github.io/berita-pariwisata-contact/privacy.html
+   ✅ Sudah online dan accessible
+   ✅ Mencakup news aggregator disclaimer
+   ✅ Contact information untuk privacy concerns
+
+⏳ 5. URL VIDEO YOUTUBE (opsional)
+   🔄 BELUM DIBUAT - Bisa ditambahkan nanti
+
+✅ 6. EMAIL DEVELOPER
+   info.beritapariwisata@smkbaknus666.sch.id
+
+✅ 7. URL WEB
+   https://frianprianas.github.io/berita-pariwisata-contact/
+
+✅ 8. NO. TELP DEVELOPER
+   +62-21-1234-5666
+
+✅ 9. FILE .AAB YANG SUDAH DITANDATANGANI KEYSTORE
+   📁 File: build/app/outputs/bundle/release/app-release.aab
+   📦 Size: 41.7MB
+   🔢 Version: 1.0.5+6
+   🆔 Package: id.smkbaknus666.wartawisata
+   ✅ Signed dan ready untuk upload
+
+⏳ 10. ICON 512x512px format .png
+   📋 Instructions: icon_instructions.txt
+   🔄 PERLU DIBUAT: Gunakan design hitam dengan icon newspaper amber
+
+⏳ 11. FEATURE GRAPHIC 1024x500px format .png/.jpg
+   📋 Instructions: feature_graphic_instructions.txt  
+   🔄 PERLU DIBUAT: Gunakan template dengan branding yang konsisten
+
+⏳ 12. SCREENSHOTS (3-8 screenshots, 320x640px minimum, aspect ratio 1:2)
+   📋 Instructions: screenshots_instructions.txt
+   🔄 PERLU DIAMBIL: Minimal 3 screenshots dari key features
+   
+   PRIORITAS SCREENSHOTS:
+   1. 🎯 MAIN_PAGE_WITH_BANNER.png (WAJIB)
+   2. 🎯 ABOUT_PAGE_CONTACT.png (WAJIB) 
+   3. 🎯 NEWS_AGGREGATOR_DECLARATION.png (WAJIB)
+   4. 📱 CONTACT_DIALOG.png (Recommended)
+   5. 🌟 SPLASH_SCREEN.png (Good to have)
+
+🎯 ADDITIONAL REQUIREMENTS UNTUK NEWS APPS:
+===========================================
+
+✅ COMPLIANCE FEATURES DALAM APP:
+   ✅ Prominent contact information (floating button + About page)
+   ✅ Clear news aggregator declaration (orange warning box)
+   ✅ Source attribution untuk semua content
+   ✅ Real-time content freshness indicators
+   ✅ Multiple access points untuk contact developer
+
+✅ GOOGLE PLAY CONSOLE SETTINGS:
+   📱 Category: News & Magazines
+   🎯 Content Rating: Everyone  
+   🌍 Target Countries: Indonesia (primary), Global (secondary)
+   📧 Store Listing Contact: info.beritapariwisata@smkbaknus666.sch.id
+   🌐 Store Listing Website: https://frianprianas.github.io/berita-pariwisata-contact/
+
+✅ APP DECLARATIONS:
+   ✅ News & Magazine App Declaration: YES
+   ✅ News Aggregator Type: YES
+   ✅ Content Source Declaration: Multiple sources listed
+   ✅ Contact Information Accessibility: Multiple methods in-app
+
+🚀 READY TO UPLOAD:
+==================
+✅ App file (.aab) - READY
+✅ App descriptions - READY  
+✅ Contact info - READY
+✅ Privacy policy - READY
+✅ Compliance features - READY
+
+⏳ STILL NEEDED:
+===============
+🎨 Icon 512x512px (dapat dibuat dengan tools online)
+🎨 Feature graphic 1024x500px (dapat dibuat dengan Canva)
+📸 Screenshots 3-8 (perlu diambil dari emulator/device)
+
+ESTIMATED TIME TO COMPLETE: 2-3 hours untuk visual assets
+APPROVAL CHANCE: TINGGI (semua compliance requirements sudah terpenuhi)

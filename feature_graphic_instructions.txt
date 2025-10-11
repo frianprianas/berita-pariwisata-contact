@@ -1,0 +1,25 @@
+FEATURE GRAPHIC DESIGN SPECIFICATION:
+Ukuran: 1024x500px
+Format: PNG atau JPG
+DPI: 72-150
+
+DESIGN ELEMENTS:
+Background: Gradient hitam ke abu-abu gelap
+Main Text: "KORAN PARIWISATA INDONESIA" (Font: Bold, Warna: Amber #F59E0B)
+Subtitle: "Portal Berita Pariwisata Terdepan" (Font: Regular, Warna: Putih)
+Badge: "NEWS AGGREGATOR" (Background: Biru, Text: Putih)
+Icon: Newspaper icon besar di kanan
+Logo sources: Small logos CNN, MetroTV (dengan permission/fair use)
+
+LAYOUT:
+- Left side: Text content
+- Right side: Large newspaper icon
+- Bottom: "Akses ke berbagai sumber terpercaya"
+
+TOOLS YANG BISA DIGUNAKAN:
+1. Canva.com (Template "Google Play Feature Graphic")
+2. Figma
+3. Adobe Photoshop
+4. GIMP (gratis)
+
+Simpan sebagai: feature_graphic_1024x500.png

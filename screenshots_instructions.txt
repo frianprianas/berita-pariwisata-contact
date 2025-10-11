@@ -1,0 +1,65 @@
+SCREENSHOT REQUIREMENTS:
+- Minimal: 3 screenshots
+- Maksimal: 8 screenshots  
+- Resolusi minimal: 320x640px
+- Aspect ratio: 1:2 (portrait mode)
+- Format: PNG
+- Recommended: 1080x1920px atau 1440x2560px
+
+SCREENSHOT LIST YANG HARUS DIAMBIL:
+
+1. SPLASH_SCREEN.png
+   - Splash screen dengan logo dan loading
+   - Menunjukkan branding aplikasi
+
+2. MAIN_PAGE_WITH_BANNER.png
+   - Halaman utama dengan banner "NEWS AGGREGATOR" di atas
+   - Menunjukkan WebView dengan konten Koran Pariwisata
+   - Bottom navigation terlihat
+   - Floating contact button terlihat
+
+3. ABOUT_PAGE_CONTACT.png
+   - About page dengan section contact hijau yang prominent
+   - Menunjukkan contact information yang mudah diakses
+   - Scroll ke bagian contact section
+
+4. CONTACT_DIALOG.png
+   - Dialog contact yang muncul dari floating button
+   - Menunjukkan email, phone, dan institusi
+   - Tombol "CONTACT" terlihat ditekan
+
+5. NEWS_AGGREGATOR_DECLARATION.png
+   - About page dengan orange warning box
+   - Menunjukkan disclaimer aggregator yang jelas
+   - Section "PEMBERITAHUAN AGREGATOR BERITA"
+
+6. SOURCE_ATTRIBUTION.png (Optional)
+   - About page dengan daftar sumber berita
+   - Menunjukkan attribution ke semua sources
+   - List URL sources yang jelas
+
+7. CNN_INDONESIA_PAGE.png (Optional)
+   - Halaman CNN Indonesia pariwisata
+   - Banner menunjukkan "Content dari CNN Indonesia"
+   - Navigation tab "CNN Indonesia" aktif
+
+8. METROTV_PAGE.png (Optional)
+   - Halaman MetroTV News pariwisata
+   - Banner menunjukkan "Content dari MetroTV News" 
+   - Navigation tab "MetroTV News" aktif
+
+CARA MENGAMBIL SCREENSHOTS:
+1. Run aplikasi di emulator atau device
+2. Gunakan Android Studio screenshot tool atau
+3. Gunakan ADB: adb shell screencap -p /sdcard/screenshot.png
+4. Atau gunakan device screenshot langsung
+
+TIPS UNTUK SCREENSHOT YANG BAIK:
+- Pastikan semua text jelas terbaca
+- Tidak ada loading spinner (kecuali untuk splash)
+- UI elements tidak terpotong
+- Warna kontras yang baik
+- Menunjukkan key features aplikasi
+- Fokus pada compliance features (contact, aggregator declaration)
+
+Simpan dengan nama yang descriptive dan urutkan sesuai flow user experience.

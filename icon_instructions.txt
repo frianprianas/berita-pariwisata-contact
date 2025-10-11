@@ -1,0 +1,14 @@
+Saya perlu membuat icon 512x512px. Untuk sekarang, Anda bisa menggunakan icon yang ada di folder android/app/src/main/res/mipmap-xxxhdpi/launcher_icon.png dan resize ke 512x512px.
+
+Atau gunakan icon generator online seperti:
+1. Canva.com - buat design dengan template icon
+2. Icon Generator online tools
+3. Figma - untuk design custom
+
+Template Icon Design:
+- Background: Hitam (#000000)
+- Icon: Newspaper icon dalam warna amber (#F59E0B)
+- Text "KP" atau logo sederhana
+- Style: Modern, clean, professional
+
+Simpan sebagai: launcher_icon_512.png
