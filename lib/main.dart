@@ -40,7 +40,7 @@ class SplashScreen extends StatefulWidget {
   State<SplashScreen> createState() => _SplashScreenState();
 }
 
-class _SplashScreenState extends State<SplashScreen> 
+class _SplashScreenState extends State<SplashScreen>
     with SingleTickerProviderStateMixin {
   late AnimationController _animationController;
   late Animation<double> _fadeAnimation;
@@ -52,26 +52,24 @@ class _SplashScreenState extends State<SplashScreen>
       duration: const Duration(milliseconds: 1500),
       vsync: this,
     );
-    _fadeAnimation = Tween<double>(
-      begin: 0.0,
-      end: 1.0,
-    ).animate(CurvedAnimation(
-      parent: _animationController,
-      curve: Curves.easeInOut,
-    ));
+    _fadeAnimation = Tween<double>(begin: 0.0, end: 1.0).animate(
+      CurvedAnimation(parent: _animationController, curve: Curves.easeInOut),
+    );
 
     _animationController.forward();
-    
+
     // Navigate to main app after splash
     Future.delayed(const Duration(milliseconds: 2500), () {
       if (mounted) {
         Navigator.pushReplacement(
           context,
           PageRouteBuilder(
-            pageBuilder: (context, animation, secondaryAnimation) => const WebViewHome(),
-            transitionsBuilder: (context, animation, secondaryAnimation, child) {
-              return FadeTransition(opacity: animation, child: child);
-            },
+            pageBuilder: (context, animation, secondaryAnimation) =>
+                const WebViewHome(),
+            transitionsBuilder:
+                (context, animation, secondaryAnimation, child) {
+                  return FadeTransition(opacity: animation, child: child);
+                },
             transitionDuration: const Duration(milliseconds: 500),
           ),
         );
@@ -130,7 +128,10 @@ class _SplashScreenState extends State<SplashScreen>
               ),
               const SizedBox(height: 32),
               Container(
-                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 16,
+                  vertical: 8,
+                ),
                 decoration: BoxDecoration(
                   color: Colors.blue.withOpacity(0.1),
                   borderRadius: BorderRadius.circular(8),
@@ -180,7 +181,7 @@ class _WebViewHomeState extends State<WebViewHome> {
 
   WebViewController? _controller; // Make nullable for lazy init
 
-    @override
+  @override
   void initState() {
     super.initState();
     // Delay WebView initialization for faster launch
@@ -191,11 +192,11 @@ class _WebViewHomeState extends State<WebViewHome> {
 
   void _initializeWebView() {
     if (_webViewInitialized) return;
-    
+
     setState(() {
       _isLoading = true;
     });
-    
+
     _controller = WebViewController()
       ..setJavaScriptMode(JavaScriptMode.unrestricted)
       ..setNavigationDelegate(
@@ -221,7 +222,8 @@ class _WebViewHomeState extends State<WebViewHome> {
           onHttpError: (HttpResponseError error) {
             if (mounted) {
               setState(() {
-                _errorMessage = 'Error loading page: ${error.response?.statusCode}';
+                _errorMessage =
+                    'Error loading page: ${error.response?.statusCode}';
                 _isLoading = false;
               });
             }
@@ -237,7 +239,7 @@ class _WebViewHomeState extends State<WebViewHome> {
         ),
       )
       ..loadRequest(Uri.parse(_urls[_selectedIndex]));
-    
+
     _webViewInitialized = true;
   }
 
@@ -246,7 +248,7 @@ class _WebViewHomeState extends State<WebViewHome> {
       _selectedIndex = index;
       _errorMessage = '';
     });
-    
+
     if (!_webViewInitialized) {
       _initializeWebView();
     } else if (_controller != null && index < _urls.length) {
@@ -264,12 +266,12 @@ class _WebViewHomeState extends State<WebViewHome> {
 
   @override
   Widget build(BuildContext context) {
-    String currentSiteName = _selectedIndex == 0 
-        ? 'Koran Pariwisata' 
-        : _selectedIndex == 1 
-            ? 'CNN Indonesia' 
-            : 'MetroTV News';
-    
+    String currentSiteName = _selectedIndex == 0
+        ? 'Koran Pariwisata'
+        : _selectedIndex == 1
+        ? 'CNN Indonesia'
+        : 'MetroTV News';
+
     return Scaffold(
       appBar: AppBar(
         title: Text(currentSiteName),
@@ -323,7 +325,11 @@ class _WebViewHomeState extends State<WebViewHome> {
                   const SizedBox(width: 8),
                   Expanded(
                     child: Text(
-                      'NEWS AGGREGATOR • Content dari ${_selectedIndex == 0 ? "Koran Pariwisata" : _selectedIndex == 1 ? "CNN Indonesia" : "MetroTV News"} • Live Updated',
+                      'NEWS AGGREGATOR • Content dari ${_selectedIndex == 0
+                          ? "Koran Pariwisata"
+                          : _selectedIndex == 1
+                          ? "CNN Indonesia"
+                          : "MetroTV News"} • Live Updated',
                       style: const TextStyle(
                         color: Colors.white,
                         fontSize: 12,
@@ -333,10 +339,7 @@ class _WebViewHomeState extends State<WebViewHome> {
                   ),
                   Text(
                     _getCurrentTime(),
-                    style: const TextStyle(
-                      color: Colors.white70,
-                      fontSize: 10,
-                    ),
+                    style: const TextStyle(color: Colors.white70, fontSize: 10),
                   ),
                 ],
               ),
@@ -393,10 +396,7 @@ class _WebViewHomeState extends State<WebViewHome> {
                     SizedBox(height: 8),
                     Text(
                       'Tap navigasi untuk mulai membaca berita',
-                      style: TextStyle(
-                        fontSize: 16,
-                        color: Colors.grey,
-                      ),
+                      style: TextStyle(fontSize: 16, color: Colors.grey),
                     ),
                   ],
                 ),
@@ -444,47 +444,77 @@ class _WebViewHomeState extends State<WebViewHome> {
                     Text('HUBUNGI KAMI'),
                   ],
                 ),
-                content: const Column(
-                  mainAxisSize: MainAxisSize.min,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Row(
-                      children: [
-                        Icon(Icons.email, color: Colors.green, size: 20),
-                        SizedBox(width: 8),
-                        Expanded(
-                          child: SelectableText(
-                            'info.beritapariwisata@smkbaknus666.sch.id',
-                            style: TextStyle(fontSize: 14),
+                content: const SingleChildScrollView(
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'EDITOR ADDRESS:',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 15,
+                          color: Colors.green,
+                        ),
+                      ),
+                      SizedBox(height: 8),
+                      Text(
+                        'Koran Pariwisata\nJl. Kembang III – No. 64\nKwitang – Tugu Tani\nJAKARTA PUSAT\nINDONESIA',
+                        style: TextStyle(fontSize: 13),
+                      ),
+                      SizedBox(height: 12),
+                      Row(
+                        children: [
+                          Icon(Icons.phone, color: Colors.green, size: 18),
+                          SizedBox(width: 8),
+                          SelectableText(
+                            '+6285182828181',
+                            style: TextStyle(fontSize: 13),
                           ),
-                        ),
-                      ],
-                    ),
-                    SizedBox(height: 12),
-                    Row(
-                      children: [
-                        Icon(Icons.phone, color: Colors.green, size: 20),
-                        SizedBox(width: 8),
-                        SelectableText(
-                          '+62-21-1234-5666',
-                          style: TextStyle(fontSize: 14),
-                        ),
-                      ],
-                    ),
-                    SizedBox(height: 12),
-                    Row(
-                      children: [
-                        Icon(Icons.school, color: Colors.green, size: 20),
-                        SizedBox(width: 8),
-                        Expanded(
-                          child: Text(
-                            'SMK Baknus 666, Jakarta',
-                            style: TextStyle(fontSize: 14),
+                        ],
+                      ),
+                      SizedBox(height: 8),
+                      Row(
+                        children: [
+                          Icon(Icons.email, color: Colors.green, size: 18),
+                          SizedBox(width: 8),
+                          Expanded(
+                            child: SelectableText(
+                              'admin@koran-pariwisata.com',
+                              style: TextStyle(fontSize: 13),
+                            ),
                           ),
+                        ],
+                      ),
+                      SizedBox(height: 16),
+                      Text(
+                        'BUSINESS OFFICE:',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 15,
+                          color: Colors.green,
                         ),
-                      ],
-                    ),
-                  ],
+                      ),
+                      SizedBox(height: 8),
+                      Text(
+                        'PT. EKA WIRA INDONESIA\nJl. Asia Afrika, Braga, Sumur Bandung 004/006\nBANDUNG – WEST JAVA\nINDONESIA',
+                        style: TextStyle(fontSize: 13),
+                      ),
+                      SizedBox(height: 8),
+                      Row(
+                        children: [
+                          Icon(Icons.email, color: Colors.green, size: 18),
+                          SizedBox(width: 8),
+                          Expanded(
+                            child: SelectableText(
+                              'ceo@koran-pariwisata.com',
+                              style: TextStyle(fontSize: 13),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
                 ),
                 actions: [
                   TextButton(
@@ -498,7 +528,10 @@ class _WebViewHomeState extends State<WebViewHome> {
         },
         backgroundColor: Colors.green,
         icon: const Icon(Icons.contact_phone, color: Colors.white),
-        label: const Text('CONTACT', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
+        label: const Text(
+          'CONTACT',
+          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+        ),
       ),
     );
   }
@@ -519,10 +552,7 @@ class AboutPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Tentang Aplikasi'),
-        centerTitle: true,
-      ),
+      appBar: AppBar(title: const Text('Tentang Aplikasi'), centerTitle: true),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: SingleChildScrollView(
@@ -537,7 +567,7 @@ class AboutPage extends StatelessWidget {
                     Text(
                       'Koran Pariwisata Indonesia',
                       style: TextStyle(
-                        fontSize: 24, 
+                        fontSize: 24,
                         fontWeight: FontWeight.bold,
                         color: Colors.amber,
                       ),
@@ -555,7 +585,7 @@ class AboutPage extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 24),
-              
+
               // CONTACT INFORMATION - VERY PROMINENT
               Container(
                 padding: const EdgeInsets.all(20),
@@ -570,12 +600,16 @@ class AboutPage extends StatelessWidget {
                     const Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Icon(Icons.contact_phone, color: Colors.green, size: 28),
+                        Icon(
+                          Icons.contact_phone,
+                          color: Colors.green,
+                          size: 28,
+                        ),
                         SizedBox(width: 12),
                         Text(
                           'HUBUNGI KAMI',
                           style: TextStyle(
-                            fontSize: 20, 
+                            fontSize: 20,
                             fontWeight: FontWeight.bold,
                             color: Colors.green,
                           ),
@@ -588,7 +622,9 @@ class AboutPage extends StatelessWidget {
                       decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(8),
-                        border: Border.all(color: Colors.green.withOpacity(0.3)),
+                        border: Border.all(
+                          color: Colors.green.withOpacity(0.3),
+                        ),
                       ),
                       child: Column(
                         children: [
@@ -645,7 +681,7 @@ class AboutPage extends StatelessWidget {
                   ],
                 ),
               ),
-              
+
               // NEWS AGGREGATOR DECLARATION - PROMINENT
               Container(
                 padding: const EdgeInsets.all(16),
@@ -660,7 +696,11 @@ class AboutPage extends StatelessWidget {
                   children: [
                     Row(
                       children: [
-                        Icon(Icons.warning_amber, color: Colors.orange, size: 24),
+                        Icon(
+                          Icons.warning_amber,
+                          color: Colors.orange,
+                          size: 24,
+                        ),
                         SizedBox(width: 8),
                         Expanded(
                           child: Text(
@@ -686,7 +726,7 @@ class AboutPage extends StatelessWidget {
                   ],
                 ),
               ),
-              
+
               const Text(
                 'Aplikasi ini dirancang khusus untuk memberikan akses mudah ke berita dan informasi '
                 'terkini seputar pariwisata Indonesia. Koran Pariwisata menjadi sumber utama yang '
@@ -717,7 +757,7 @@ class AboutPage extends StatelessWidget {
                         Text(
                           'Informasi Konten:',
                           style: TextStyle(
-                            fontSize: 18, 
+                            fontSize: 18,
                             fontWeight: FontWeight.bold,
                             color: Colors.blue,
                           ),
@@ -734,11 +774,40 @@ class AboutPage extends StatelessWidget {
                     ),
                     const SizedBox(height: 12),
                     const Text(
-                      'Kontak Developer:',
-                      style: TextStyle(fontWeight: FontWeight.bold),
+                      'EDITOR ADDRESS:',
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 15,
+                      ),
                     ),
-                    const Text('Email: info.beritapariwisata@smkbaknus666.sch.id'),
-                    const Text('Telepon: +62-21-1234-5666'),
+                    const SizedBox(height: 4),
+                    const Text(
+                      'Koran Pariwisata\n'
+                      'Jl. Kembang III – No. 64\n'
+                      'Kwitang – Tugu Tani\n'
+                      'JAKARTA PUSAT, INDONESIA',
+                      style: TextStyle(fontSize: 13),
+                    ),
+                    const SizedBox(height: 8),
+                    const Text('Hotline: +6285182828181'),
+                    const Text('Email: admin@koran-pariwisata.com'),
+                    const SizedBox(height: 12),
+                    const Text(
+                      'BUSINESS OFFICE:',
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 15,
+                      ),
+                    ),
+                    const SizedBox(height: 4),
+                    const Text(
+                      'PT. EKA WIRA INDONESIA\n'
+                      'Jl. Asia Afrika, Braga, Sumur Bandung 004/006\n'
+                      'BANDUNG – WEST JAVA, INDONESIA',
+                      style: TextStyle(fontSize: 13),
+                    ),
+                    const SizedBox(height: 8),
+                    const Text('Email: ceo@koran-pariwisata.com'),
                   ],
                 ),
               ),
@@ -760,7 +829,7 @@ class AboutPage extends StatelessWidget {
                         Text(
                           'Sumber Berita:',
                           style: TextStyle(
-                            fontSize: 18, 
+                            fontSize: 18,
                             fontWeight: FontWeight.bold,
                             color: Colors.amber,
                           ),
@@ -779,11 +848,13 @@ class AboutPage extends StatelessWidget {
                           title: Text(
                             urls[i],
                             style: TextStyle(
-                              fontWeight: i == 0 ? FontWeight.bold : FontWeight.normal,
+                              fontWeight: i == 0
+                                  ? FontWeight.bold
+                                  : FontWeight.normal,
                               color: i == 0 ? Colors.amber : Colors.black87,
                             ),
                           ),
-                          subtitle: i == 0 
+                          subtitle: i == 0
                               ? const Text(
                                   'Situs Utama',
                                   style: TextStyle(

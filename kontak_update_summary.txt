@@ -1,0 +1,67 @@
+✅ UPDATE KONTAK INFO - SELESAI
+
+=== PERUBAHAN YANG DILAKUKAN ===
+
+**Kontak lama:**
+- Email: info.beritapariwisata@smkbaknus666.sch.id
+- Telepon: +62-21-1234-5666
+- Lokasi: SMK Baknus 666, Jakarta
+
+**Kontak baru:**
+
+📍 **EDITOR ADDRESS:**
+- Koran Pariwisata
+- Jl. Kembang III – No. 64
+- Kwitang – Tugu Tani
+- JAKARTA PUSAT, INDONESIA
+- Hotline: +6285182828181
+- Email: admin@koran-pariwisata.com
+
+🏢 **BUSINESS OFFICE:**
+- PT. EKA WIRA INDONESIA
+- Jl. Asia Afrika, Braga, Sumur Bandung 004/006
+- BANDUNG – WEST JAVA, INDONESIA
+- Email: ceo@koran-pariwisata.com
+
+=== LOKASI YANG DIUPDATE ===
+
+✅ **Floating Contact Button** (line ~447-507)
+   - Dialog popup saat klik icon kontak
+   - Menampilkan kedua alamat lengkap
+   - Scrollable untuk konten panjang
+
+✅ **About Page** (line ~747-789)
+   - Section "Informasi Konten"
+   - Menampilkan kedua alamat lengkap
+   - Formatting yang rapi dan mudah dibaca
+
+=== STATUS ===
+
+✅ Code updated successfully
+✅ No errors found
+✅ Formatted properly
+✅ Ready to test
+
+=== LANGKAH SELANJUTNYA ===
+
+1. **Test aplikasi:**
+   - Klik floating contact button (icon hijau di kanan bawah)
+   - Buka About page dari menu
+   - Verifikasi kedua kontak tampil dengan benar
+
+2. **Rebuild untuk release:**
+   ```bash
+   flutter build apk --release    # untuk Android
+   flutter build ios --release    # untuk iOS
+   ```
+
+3. **Update di store (jika perlu):**
+   - Update versi di pubspec.yaml
+   - Rebuild dan upload ke Google Play / App Store
+
+=== CATATAN ===
+
+- Kontak info sekarang menampilkan 2 alamat: Editor & Business Office
+- Email menggunakan domain @koran-pariwisata.com
+- Hotline menggunakan nomor +6285182828181
+- Format lebih professional dengan pemisahan yang jelas
