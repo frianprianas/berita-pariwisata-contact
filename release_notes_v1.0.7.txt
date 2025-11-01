@@ -1,0 +1,99 @@
+📦 RELEASE NOTES - VERSION 1.0.7 (Build 8)
+==========================================
+
+Release Date: November 1, 2025
+Platform: Android (Google Play Store)
+
+🎯 WHAT'S NEW:
+--------------
+
+✅ Updated Contact Information:
+   - Contact information has been updated to reflect new organizational structure
+   - Changed from educational institution contact to professional news organization
+
+📍 NEW EDITOR ADDRESS:
+   - Koran Pariwisata
+   - Jl. Kembang III – No. 64
+   - Kwitang – Tugu Tani
+   - Jakarta Pusat, Indonesia
+   - Hotline: +6285182828181
+   - Email: admin@koran-pariwisata.com
+
+🏢 NEW BUSINESS OFFICE:
+   - PT. EKA WIRA INDONESIA
+   - Jl. Asia Afrika, Braga, Sumur Bandung 004/006
+   - Bandung, West Java, Indonesia
+   - Email: ceo@koran-pariwisata.com
+
+📱 UPDATED FEATURES:
+   - Floating contact button now displays dual-structure contact information
+   - About page updated with comprehensive contact details
+   - Professional email domain @koran-pariwisata.com
+   - New hotline number for better customer support
+
+🔧 TECHNICAL DETAILS:
+---------------------
+- Version: 1.0.7
+- Build Number: 8
+- Package Name: id.smkbaknus666.beritapariwisata
+- AAB Size: 41.7 MB
+- Min SDK: Android 21 (Lollipop)
+- Target SDK: Android 34
+
+📦 BUILD OUTPUT:
+----------------
+File Location: build/app/outputs/bundle/release/app-release.aab
+File Size: 41.7 MB
+Build Type: Release (Signed)
+
+🚀 DEPLOYMENT STEPS:
+--------------------
+
+1. Login to Google Play Console
+   URL: https://play.google.com/console
+
+2. Select "Koran Pariwisata Indonesia" app
+
+3. Navigate to: Release → Production → Create new release
+
+4. Upload AAB file:
+   build/app/outputs/bundle/release/app-release.aab
+
+5. Release Notes (Indonesian):
+   ----------------------------
+   Pembaruan informasi kontak:
+   - Alamat redaksi baru: Koran Pariwisata, Jakarta (Jl. Kembang III No. 64)
+   - Kantor bisnis: PT. EKA WIRA INDONESIA, Bandung (Jl. Asia Afrika Braga)
+   - Email baru: admin@koran-pariwisata.com & ceo@koran-pariwisata.com
+   - Hotline baru: +6285182828181
+   - Struktur kontak lebih profesional dan mudah diakses
+
+6. Review and Rollout:
+   - Review: Automatic (usually within 1-2 days)
+   - Rollout: Can be immediate or staged
+   - Recommended: Start with 10% rollout
+
+✅ CHECKLIST SEBELUM SUBMIT:
+----------------------------
+☑ AAB file berhasil dibangun (41.7 MB)
+☑ Version dinaikkan dari 1.0.6+7 ke 1.0.7+8
+☑ Kontak info diupdate di aplikasi
+☑ Code di-push ke GitHub repository
+☑ README.md diupdate dengan kontak baru
+☑ Tested locally (kontak button & About page)
+
+📊 EXPECTED TIMELINE:
+---------------------
+- Upload to Play Console: 5-10 minutes
+- Review by Google: 1-2 days
+- Available to users: Immediately after approval
+
+🎉 READY FOR DEPLOYMENT!
+========================
+
+File AAB siap untuk di-upload ke Google Play Store dengan:
+- Kontak info yang sudah diperbarui
+- Struktur organisasi profesional baru
+- Email & hotline yang baru
+
+Good luck with the update! 🚀
