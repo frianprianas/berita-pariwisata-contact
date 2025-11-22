@@ -1,0 +1,30 @@
+Version: 2.5.0 (Build 1)
+
+Short notes for App Review team
+
+App: Koran Pariwisata Indonesia — a native reading app focused on Indonesian tourism news. This is not a simple content aggregator; it includes several on-device native features to manage reading and offline usage.
+
+Key native features (visible in Menu / Dashboard):
+- Local storage (SQLite): offline articles, bookmarks, in-app notes, and collections.
+- Text-to-Speech (TTS) with text highlighting while reading aloud.
+- Reading statistics and daily goals on the Dashboard.
+- In-app notes editor and local sync (no account required).
+- Dark mode, share, and onboarding that highlights these native functions.
+
+Reproduction steps for the "News" screen (to validate the fix):
+1. Open the app.
+2. From Menu, tap the "Berita" (News) card or the "Berita Terkini" banner.
+3. The app will immediately show cached articles (if available). If no cache exists you will see shimmer placeholders while the app fetches new data.
+4. The app uses per-request timeouts; if server responses are very slow the UI shows a "Retry" button after ~12 seconds.
+
+Notes about this release (v2.5.0):
+- Fixes included: parallel image fetching, per-request timeouts, offline-first behavior (show cache first, then refresh), and a watchdog timeout that replaces an indefinite spinner with a retry UI.
+- These changes address a previous App Review report where tapping "Berita" could display an indefinite spinner on slow/unstable network conditions.
+
+No login is required. If you need additional reproduction steps (TTS demo, notes edit, or statistics), or device logs from a specific device/OS (e.g., iPad Air on iPadOS 26.0.1), we can provide them immediately.
+
+Contact for App Review:
+- Email: frianprianas@gmail.com
+- Phone/WhatsApp: +62 851-8282-8181
+
+Thank you — please let us know if you need further steps or logs to complete the review.

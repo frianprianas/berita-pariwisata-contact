@@ -1,0 +1,1 @@
+Koran Pariwisata v2.5.0 — native reading app (offline cache, bookmarks, TTS, reading stats); open Menu → Berita to verify cached articles display quickly and a Retry button appears if loading stalls.

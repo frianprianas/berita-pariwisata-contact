@@ -1,0 +1,32 @@
+Version: 2.5.0 (Build 1)
+
+Short notes for Google Play Review / QA
+
+App: Koran Pariwisata Indonesia — native reading app focused on Indonesian tourism news. This app is not a passive aggregator; it includes on-device features to manage reading and offline usage.
+
+Key native features (visible in Menu / Dashboard):
+- Local storage (SQLite): offline articles, bookmarks, in-app notes, and collections.
+- Text-to-Speech (TTS) with text highlighting while reading aloud.
+- Reading statistics and daily goals on the Dashboard.
+- In-app notes editor with local sync (no account required).
+- Dark mode, share, and onboarding that highlights these native features.
+
+Simple test steps for the "News/Berita" screen:
+1. Install the app (upload AAB to Play Console > Internal testing / closed track) or install the APK directly on a device.
+2. Open the app and tap the "Berita" (News) card from the Menu.
+3. If previously viewed articles exist, they display immediately from local cache. If not, shimmer placeholders appear while fresh data loads.
+4. The app employs per-request timeouts and a watchdog: on extremely slow networks a "Retry" button appears after about 12 seconds.
+
+Notes about this release:
+- Fixes in v2.5.0: parallel image fetching, per-request timeouts, offline-first behavior (show cache first then refresh), and watchdog timeout to avoid indefinite spinner.
+- These changes address an earlier report where tapping "Berita" could leave the UI stuck on a spinner under very slow server responses.
+
+Contact for QA/Review:
+- Email: frianprianas@gmail.com
+- Phone/WhatsApp: +62 851-8282-8181
+
+Artifacts:
+- App Bundle: build/app/outputs/bundle/release/app-release.aab
+- APK: build/app/outputs/flutter-apk/app-release.apk
+
+Thanks — please contact us if you need device logs or further reproduction steps (e.g., TTS demo or notes editing workflow).

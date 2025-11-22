@@ -1,0 +1,8 @@
+# Example gradle.properties for signing (DO NOT COMMIT real secrets)
+# Place your real values in android/gradle.properties (local, gitignored)
+
+# Path to your keystore file. Can be relative to project root or absolute.
+KEYSTORE_FILE=../keystore/app-release.jks
+KEYSTORE_PASSWORD=YOUR_STORE_PASSWORD
+KEY_ALIAS=app-release-key
+KEY_PASSWORD=YOUR_KEY_PASSWORD

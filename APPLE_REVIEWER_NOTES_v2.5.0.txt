@@ -1,0 +1,32 @@
+Versi: 2.5.0 (Build 1)
+
+Catatan singkat untuk tim App Review:
+
+Aplikasi: Koran Pariwisata Indonesia — aplikasi pembaca berita pariwisata yang menyediakan fitur native lengkap untuk manajemen bacaan (bukan sekadar agregator).
+
+Fitur native utama (mudah ditemukan di Menu / Dashboard):
+- Penyimpanan lokal (SQLite): mode offline dan artikel tersimpan, bookmark, catatan, dan koleksi.
+- Text-to-Speech (TTS) dengan highlighting teks saat dibacakan.
+- Statistik membaca & target harian (Dashboard).
+- Editor catatan di dalam aplikasi (simpan & sinkronisasi lokal).
+- Dark mode, share, dan onboarding yang menampilkan fitur-fitur ini.
+
+Tidak memerlukan login. Semua fitur native dapat diakses langsung setelah memasang aplikasi.
+
+Langkah sederhana untuk pengujian "Berita" (reproduction steps):
+1. Buka aplikasi.
+2. Dari Menu, ketuk kartu "Berita" (atau banner "Berita Terkini").
+3. Aplikasi akan segera menampilkan artikel yang tersimpan secara lokal (jika tersedia). Jika tidak ada cache, akan tampil shimmer/loading sementara data segar diambil dari server.
+4. Jika koneksi lambat: artikel tetap akan muncul dalam beberapa detik; bila loading berlangsung lebih dari 12 detik, UI menampilkan tombol "Retry" untuk memicu ulang permintaan.
+
+Perhatian untuk penguji iPad: jika Anda ingin mereproduksi masalah sebelumnya, silakan coba pada iPad Air dengan iPadOS 26.0.1 — langkah di atas seharusnya menunjukkan daftar artikel cepat berkat strategi offline-first dan timeouts per-request.
+
+Catatan teknis singkat:
+- Perbaikan v2.5.0: parallel image fetch, per-request timeouts, offline-first (tampilkan cache dulu lalu refresh), dan watchdog timeout untuk mengganti spinner dengan UI retry.
+- Versi ini khusus untuk memperbaiki kondisi di mana daftar Berita bisa terhenti pada spinner saat respons server sangat lambat.
+
+Jika butuh akun penguji atau langkah tambahan, hubungi kami:
+- Email: frianprianas@gmail.com
+- Telepon/WhatsApp: 085182828181
+
+Terima kasih atas bantuannya — mohon beri tahu jika tim review membutuhkan langkah reproduksi tambahan atau log perangkat, kami siap menyediakan.
